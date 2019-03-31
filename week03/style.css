@@ -195,7 +195,28 @@ float:right;
 .footermenubar .icon {
   display: none;
 }
+/* transections 1*/
+.logomuumimuse {
+  width: 100px;
+  height: 100px;
+  background:none;
+  -webkit-transition: width 3s; /* Safari */
+  transition: width 3s;
+}
 
+/* For Safari 3.1 to 6.0 */
+.logomuumimuse img {-webkit-transition-timing-function: Welcome;}
+
+
+/* Standard syntax */
+.logomuumimuse img {transition-timing-function: Welcome;}
+
+.logomuumimuse :hover {
+  width: 700px;
+  background:red;
+}
+
+/* transections 2*/
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {

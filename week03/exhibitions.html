@@ -5,6 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The world’s only Moomin Museum</title>
         <link rel="stylesheet" href="style.css">
+
+        <script type="text/JavaScript">
+
+            <!--
+            var picCount=0; // global
+            var picArray= ["images/groke.png","images/moomintroll.png","images/Muminpappan.png"]
+            //
+            // gets next picture in array
+            function nextPic()
+            { // check if adding 1 exceeds number of pics in array
+            picCount=(picCount+1<picArray.length)? picCount+1 : 0;
+            // build the img to write to page using the new pic reference
+            var build='<img border="0" src="'+picArray[picCount]+'" width="205" height="100">\
+            ';
+            document.getElementById("imgHolder").innerHTML=build;
+            // repeat this after a puse of 2000ms (2sec).
+            setTimeout('nextPic()',500)
+            }
+            //-->
+        </script>
 </head>
 <body>
 
@@ -47,11 +67,12 @@
       </div>
     </div>
 </aside>
-  <article class="main">
-          <div class="ex-mainfotos"> <a href="#home">
-          <img src="images/images3.jpeg" alt="Exhibitions">
-          </div>  
-    <p></p>
+  <article class="main"onload="setTimeout('nextPic()',400)">
+
+        <div id="imgHolder">
+        <img border="0" src="images/Muminpappan.png" width="440" height="440">
+        </div>
+        
   </article>
   <footer class="footer"><h2>Muuminmuseo</h2>
     <div class="footermenubar">
